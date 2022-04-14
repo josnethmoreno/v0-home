@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>◽▫️ Josneth Moreno ▪️◾</title>
+  </head>
+
+  <body id="top">
+
+    <!-- Header -->
+    <header class="header" id="header">
+
+      <!-- Nav -->
+      <nav class="nav">
+        <div class="nav__brand">
+          <a class="nav__logo" href="#top">Josneth</a>
+        </div>
+        <button class="nav__toggle" id="navToggle">
+          <span class="menu-text" data-hover="Open">Menu</span>
+          <span class="icon-bars" id="navToggleIcon"></span>
+        </button>
+        <div class="nav__menu" id="navMenu">
+          <a href="#work" class="nav__link" style="--delay: .15s;">Work</a>
+          <a href="#about" class="nav__link" style="--delay: .25s;">About</a>
+          <a href="#greet" class="nav__link" style="--delay: .35s;">Contact</a>
+          <div class="nav__footer">
+            <div class="nav__social">
+              <p class="nav__social-caption">Follow me on</p>
+              <a href="" class="nav__social-link">
+                <span class="animated" data-hover="Behance">Behance</span>
+              </a> 
+              <a href="" class="nav__social-link">
+                <span class="animated" data-hover="Codepen">Codepen</span>
+              </a>
+              <a href="" class="nav__social-link">
+                <span class="animated" data-hover="Github">Github</span>
+              </a>
+              <a href="" class="nav__social-link">
+                <span class="animated" data-hover="Twitter">Twitter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Home -->
+      <section class="home" id="home">
+        <div class="container">
+          <h1 class="home__h1">Josneth Moreno</h1>
+          <h2 class="home__h2">
+            <span>Frontend Developer</span>
+            <span>UX/UI Designer</span>
+          </h2>
+          <a href="#work" class="home__scrolldown" data-cursor="GO!">
+            <img src="/assets/scrolldown.svg" alt="Figure scrolldown">
+          </a>
+        </div>
+      </section>
+
+
+      <!-- Work -->
+      <section class="work section" id="work">
+
+        <!-- Work Header-->
+        <div class="section__header" id="workHeader">
+          <span>01</span>
+          <span class="line"></span>
+          <span>Work</span>
+        </div>
+
+        <div class="container">
+          <h2 class="work__h2">Selected <span>work</span></h2>
+        </div>
+
+          <div class="work__wrapper">
+
+            <!-- Work Card #1-->
+            <div class="work-card" id="workCard1">
+              <div class="container">
+                <h3 class="work-card__h3">Orca</h3>
+                <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
+              </div>
+              <figure class="work-card__figure">
+                <img src="/assets/work-1.jpg" alt="Image of work one" class="work-card__img" data-cursor="View Project">
+              </figure>
+              <div class="container">
+                <div class="work-card__tags">
+                  <span class="tag">UX</span>
+                  <span class="tag">UI</span>
+                  <span class="tag">DEV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Card #2-->
+            <div class="work-card" id="workCard2">
+              <div class="container">
+                <h3 class="work-card__h3">Orca</h3>
+                <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
+              </div>
+              <figure class="work-card__figure">
+                <img src="/assets/work-2.jpg" alt="Image of work one" class="work-card__img" data-cursor="View Project">
+              </figure>
+              <div class="container">
+                <div class="work-card__tags">
+                  <span class="tag">UX</span>
+                  <span class="tag">UI</span>
+                  <span class="tag">DEV</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      </section>
+
+
+      <!-- About -->
+      <section class="about section" id="about">
+
+        <!-- About Header-->
+        <div class="section__header">
+          <span>02</span>
+          <span class="line"></span>
+          <span>About</span>
+        </div>
+
+        <div class="container">
+
+          <h2 class="about__h2">I <span>love</span> <span>Minimalism</span></h2>
+          <p class="about__copy">
+            I am a self-taught designer and front-end developer. I like the idea of creating simple, accessible and functional digital products. 
+          </p>
+
+          <div class="about__wrapper">
+
+            <!-- About Card #1-->
+            <div class="about-card" id="aboutCard1"  data-cursor="View Stack">
+              <h3 class="about-card__h3">Stack</h3>
+              <button class="about-card__btn" data-target="aboutCard1"></button>
+              <div class="about-card__body">
+                <ul class="about-card__list">
+                  <li class="about-card__item" style="--delay: .1s">Html</li>
+                  <li class="about-card__item" style="--delay: .2s">Css</li>
+                  <li class="about-card__item" style="--delay: .3s">Js</li>
+                  <li class="about-card__item" style="--delay: .4s">Vuejs</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- About Card #2-->
+            <div class="about-card delay" id="aboutCard2" data-cursor="View Skills">
+              <h3 class="about-card__h3 fix-left">Skills</h3>
+              <button class="about-card__btn" data-target="aboutCard2"></button>
+              <div class="about-card__body">
+                <ul class="about-card__list">
+                  <li class="about-card__item" style="--delay: .1s">Front Dev</li>
+                  <li class="about-card__item" style="--delay: .2s">User Interfaces</li>
+                  <li class="about-card__item" style="--delay: .3s">User Experience</li>
+                  <li class="about-card__item" style="--delay: .4s">Branding</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Greet --> 
+      <div class="greet" id="greet">
+        <span class="greet__hi" id="greetText2">HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ――HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO!</span>
+        <span class="greet__hi" id="greetText">HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ――HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO! ―― HELLO!</span>
+      </div>
+
+      
+      <!-- Contact -->
+      <section class="contact section" id="contact">
+
+        <!-- Contact Header-->
+        <div class="section__header">
+          <span>03</span>
+          <span class="line"></span>
+          <span>Contact</span>
+        </div>
+
+        <div class="container">
+
+          <h2 class="contact__h2">Now you <span>turn</span> of <span>greet ;)</span></h2>
+
+          <div class="contact-items">
+            <span class="contact-items__caption">Let's start a conversation</span>
+            <a href="" class="contact-items__link">Telegram <span class="user">@josnethmoreno</span></a>
+            <a href="" class="contact-items__link mb">Email <span class="user">hi@josneth.com</span></a>
+            <span class="contact-items__caption">Follow me on</span>
+            <a href="" class="contact-items__link">Behance <span class="user">@josnethmoreno</span></a>
+            <a href="" class="contact-items__link">Codepen <span class="user">@josnethmoreno</span></a>
+            <a href="" class="contact-items__link">Github <span class="user">@josnethmoreno</span></a>
+            <a href="" class="contact-items__link">Twitter <span class="user">@josnethmoreno</span></a>
+          </div>
+
+        </div>
+
+      </section>
+      
+    </main>
+
+    <!-- Cursor -->
+    <div class="cursor">
+      <div class="cursor__inner">
+        <div class="cursor__point" data-cursor=""></div>
+      </div>
+    </div>
+
+    <!-- Main JS -->
+    <script type="module" src="/main.js"></script>
+    
+  </body>
+</html>

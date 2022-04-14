@@ -1,0 +1,89 @@
+.icon-bars{
+	position: relative;
+	display: inline-block;
+	height: 16px;
+	width: 40px;
+}
+.icon-bars::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background-color: var(--white);
+}
+.icon-bars::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+	background-color: var(--white);
+}
+
+.icon-plus{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+}
+.icon-plus::before{
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: var(--white);
+}
+.icon-plus::after{
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: var(--white);
+	transform: rotate(90deg);
+}
+
+
+.icon-eye {
+ position: relative;
+ display: block;
+ transform: scale(3);
+ width: 24px;
+ height: 18px;
+ border-bottom-right-radius: 100px;
+ border-bottom-left-radius: 100px;
+ overflow: hidden;
+ box-sizing: border-box;
+ color: var(--shine);
+}
+
+.icon-eye::after,
+.icon-eye::before {
+ content: "";
+ display: block;
+ border-radius: 100px;
+ position: absolute;
+ box-sizing: border-box
+}
+
+.icon-eye::after {
+ top: 2px;
+ box-shadow:
+ inset 0 -8px 0 2px var(--shine),
+ inset 0 0 0 2px var(--shine);
+ width: 24px;
+ height: 24px
+}
+
+.icon-eye::before {
+ bottom: 4px;
+ left: 8px;
+ width: 8px;
+ height: 8px;
+ border: 2px solid;
+ transition: var(--3s-ease);
+} 

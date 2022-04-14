@@ -1,0 +1,148 @@
+.about__h2{
+	font-weight: var(--bold);
+	margin-bottom: calc(var(--m1) - var(--m4));
+}
+
+.about__h2 span:nth-child(1){
+	font-weight: var(--regular);
+}
+
+.about__h2 span:nth-child(2){
+	display: block;
+	margin-left: 2.8rem;
+}
+
+.about__copy{
+	margin: 0 0 var(--m2) 3rem;
+	max-width: 400px;
+	color: var(--light);
+	font-family: var(--open);
+}
+
+.about-card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: var(--m3);
+	max-width: 600px;
+	height: 335px;
+	border: 4px solid var(--light-3);
+	pointer-events: none;
+	transition: var(--3s-ease);
+	z-index: var(--z1);
+	transition: .5s ease-out .3s;
+}
+
+.about-card:nth-child(2){
+	margin-left: auto;
+}
+
+.about-card.delay .about-card__h3{
+	transition-delay: .5s;
+}
+
+.about-card__h3{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: var(--3s-ease);
+}
+
+.about-card__btn{
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: auto;
+}
+
+.about-card__btn .icon-eye{
+	margin: var(--m3) var(--m3) 0 0;
+}
+
+.about-card.active .about-card__h3{
+	top: var(--m2);
+}
+
+.about-card__body{
+	position: absolute;
+	top: var(--m2);
+	width: 100%;
+	height: 100%;
+}
+
+.about-card__list{
+	margin-top: var(--m4);
+}
+
+.about-card__item{
+	padding: 1.5rem 0 .3rem var(--p2);
+	font-size: var(--h5);
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: var(--5s-ease) var(--delay);
+}
+
+.about-card.active .about-card__item{
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.about-card__item::before{
+  content: "――"; 
+  padding-right: 8px;
+}
+
+
+/*  About 1024px  */
+@media (max-width: 1024px) {
+	.about__h2 span:nth-child(2){
+		margin-left: 2.4rem
+	}
+
+	.about__copy{
+		margin-left: 2.4rem;
+	}
+}
+
+
+/*  About 768px  */
+@media (max-width: 768px) {
+	.about__h2 span:nth-child(2){
+		margin-left: 1.9rem;
+	}
+
+	.about__copy{
+		margin-left: 1.9rem;
+	}
+
+	.about__wrapper{
+		padding: 0;
+	}
+}
+
+
+/*  About 576px  */
+@media (max-width: 576px) {
+	.about-card{
+		height: 330px;
+	}
+
+	.about-card__item{
+		padding: 1.5rem 0 .3rem var(--p3);
+	}
+}
+
+
+/*---------  ABOUT 400px  ----------*/
+@media (max-width: 400px) {
+	.about__h2 span:nth-child(2) {
+		display: inline-block;
+		margin-left: 0;
+	}
+}
+
+
