@@ -18,7 +18,7 @@
 }
 
 .work-card__h3{
-	display: block;
+	display: inline-block;
 	margin-bottom: var(--m4);
 	transition: .5s ease .1s;
 }
@@ -52,14 +52,16 @@
 }
 
 .work-card__tags{
+	display: inline-block;
 	margin: var(--m4) 0 0 var(--m4);
 }
 
 .tag{
-	padding: .4rem .6rem .2rem .6rem;
+	padding: .3rem .6rem .2rem .6rem;
 	border: 1px solid var(--light);
 	border-radius: 20px;
 	color: var(--white);
+	font-size: var(--text-small);
 	transition: var(--3s-ease);
 }
 

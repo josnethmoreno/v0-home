@@ -1,12 +1,10 @@
-/*==============================
-=            COLORS            =
-==============================*/
-:root{
-/*---------  PRIMARY  ----------*/
+:root{ /*  Colors  */
+
+/*  Primary  */
 	--black: hsla(240, 32%, 2%, 1);
 	--white: hsla(0, 0%, 100%, 1);
 
-/*---------  SECONDARY  ----------*/
+/*  Secondary  */
 	--shine: hsla(240, 10%, 88%, 1);
 	--light: hsla(240, 10%, 60%, 1);
 	--light-2: hsla(240, 10%, 30%, 1);
@@ -14,19 +12,13 @@
 }
 
 
-/*===================================
-=            TYPOGRAPHY            =
-===================================*/
-:root{
+:root{ /*  Typography  */
 	--sync: 'Syncopate', sans-serif;
 	--open: 'Open Sans', sans-serif;
 }
 
 
-/*==================================
-=            FONT SIZES            =
-==================================*/
-:root{
+:root{ /*  Font Sizes  */
 	--h1: 5rem;
 	--h2: 3.6rem;
 	--h3: 2.6rem;
@@ -71,25 +63,21 @@
 }
 
 
-/*===================================
-=            FONT WEIGHT            =
-===================================*/
-:root{
+:root{ /*  Font Weight  */
 	--regular: 300;
 	--bold: 700;
 }
 
 
-/*==========================================
-=            MARGINS & PADDINGS            =
-==========================================*/
-:root{
-/*---------  PADDING  ----------*/
+:root{ /*  Margins & Paddings  */
+
+/*  Padding  */
 	--p1: 9.25rem;
 	--p2: calc(var(--p1) / 2);
 	--p3: calc(var(--p2) / 2);
 	--p4: calc(var(--p3) / 2);
-/*---------  MARGIN  ----------*/
+
+/*  Margin  */
 	--m1: 9.25rem;
 	--m2: calc(var(--m1) / 2);
 	--m3: calc(var(--m2) / 2);
@@ -97,47 +85,34 @@
 }
 
 
-/*===============================
-=            Z-INDEX            =
-===============================*/
-:root{
+:root{ /*  Z-Index  */
 	--z1: 1;	
 	--z2: 2;	
 	--z3: 3;
+	--z4: 4;
+	--z5: 5;
 }
 
 
-/*===========================================
-=            Z-INDEX OF ELEMENTS            =
-===========================================*/
-:root{
+:root{ /*  Z-Index Of Elements  */
 	--z-toggle: var(--z1);
 	--z-modal: var(--z2);
 }
 
 
-/*====================================
-=            HEADER HEIGHT           =
-====================================*/
-:root{
+:root{ /*  Header Height  */
 	--header-height: 4rem;
 }
 
 
-/*===================================
-=            TRANSITIONS            =
-===================================*/
-:root{
+:root{ /*  Transitions  */
 	--3s-ease: .3s ease;
 	--5s-ease: .5s ease;
 	--7s-ease: .7s ease;
 }
 
 
-/*===================================
-=        CONTAINER PADDING          =
-===================================*/
-:root{
+:root{ /*  Container Padding  */
 	--container-padding: var(--p3);
 }
 

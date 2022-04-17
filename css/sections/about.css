@@ -137,7 +137,7 @@
 }
 
 
-/*---------  ABOUT 400px  ----------*/
+/*  About 400px  */
 @media (max-width: 400px) {
 	.about__h2 span:nth-child(2) {
 		display: inline-block;

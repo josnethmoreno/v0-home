@@ -29,6 +29,7 @@
 	font-size: var(--h5);
 	overflow: hidden;
 }
+
 .contact-items__link::before{
 	content: '';
 	position: absolute;
@@ -38,6 +39,7 @@
 	height: 3px;
 	background-color: var(--light-3);
 }
+
 .contact-items__link::after{
 	content: '';
 	position: absolute;
@@ -62,7 +64,7 @@
 }
 
 
-/*---------  CONTACT 1024px  ----------*/
+/*  Contact 1024px  */
 @media (max-width: 1024px) {
 	.contact__h2 span:nth-child(2){
 		margin-left: 21rem;
@@ -70,7 +72,7 @@
 }
 
 
-/*---------  CONTACT 768px  ----------*/
+/*  Contact 768px  */
 @media (max-width: 768px) {
 	.contact__h2 span:nth-child(2){
 		margin-left: 16.2rem;
@@ -78,7 +80,7 @@
 }
 
 
-/*---------  CONTACT 576px  ----------*/
+/*  Contact 576px  */
 @media (max-width: 576px) {
 	.contact__h2 span:nth-child(2){
 		display: inline-block;

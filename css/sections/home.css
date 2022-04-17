@@ -42,7 +42,7 @@
 }
 
 
-/*  HOME 576px  */
+/*  Home 576px  */
 @media (max-width: 576px) {
 	.home__h2{
 		font-size: var(--h4);
@@ -55,7 +55,7 @@
 }
 
 
-/*  HOME 400px  */
+/*  Home 400px  */
 @media (max-width: 400px) {
 	.home__h2{
 		font-size: var(--h5);
