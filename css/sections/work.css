@@ -18,7 +18,7 @@
 }
 
 .work-card__h3{
-	display: inline-block;
+	display: block;
 	margin-bottom: var(--m4);
 	transition: .5s ease .1s;
 }
@@ -52,7 +52,7 @@
 }
 
 .work-card__tags{
-	display: inline-block;
+	display: block;
 	margin: var(--m4) 0 0 var(--m4);
 }
 

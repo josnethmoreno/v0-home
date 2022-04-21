@@ -111,7 +111,7 @@ const textHorizontalScroll = (entries) => {
 
 const observerGreet = new IntersectionObserver(textHorizontalScroll, {
   root: null,
-  rootMargin: '0px',
+  rootMargin: '500px',
   threshold: 0
 });
 
