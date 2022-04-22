@@ -24,6 +24,18 @@
 	pointer-events: auto;
 }
 
+.nav__logo::after{
+	content: 'osneth';
+	transform: translateX(-10px);
+	opacity: 0;
+	transition: var(--3s-ease);
+}
+
+.nav__logo.active::after{
+	transform: translateX(0px);
+	opacity: 1;
+}
+
 .nav__toggle{
 	position: relative;
 	display: flex;

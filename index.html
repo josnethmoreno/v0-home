@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Josneth Moreno | Front Dev & UI Designer</title>
+    <title>ᴊosneтн мoreno</title>
   </head>
 
   <body id="top">
@@ -15,7 +15,7 @@
       <!-- Nav -->
       <nav class="nav">
         <div class="nav__brand">
-          <a class="nav__logo" href="#top">Josneth</a>
+          <a class="nav__logo" href="#top">J</a>
         </div>
         <button class="nav__toggle" id="navToggle">
           <span class="menu-text" data-hover="Open">Menu</span>
@@ -87,9 +87,7 @@
                 <h3 class="work-card__h3">Orca</h3>
                 <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
               </div>
-              <figure class="work-card__figure">
-                <img src="/assets/work-1.jpg" alt="Image of work one" class="work-card__img" data-cursor="View Project">
-              </figure>
+              <figure class="work-card__figure" data-cursor="View Project"></figure>
               <div class="container">
                 <div class="work-card__tags">
                   <span class="tag">UX</span>
@@ -105,9 +103,39 @@
                 <h3 class="work-card__h3">Orca</h3>
                 <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
               </div>
-              <figure class="work-card__figure">
-                <img src="/assets/work-2.jpg" alt="Image of work one" class="work-card__img" data-cursor="View Project">
-              </figure>
+              <figure class="work-card__figure" data-cursor="View Project"></figure>
+              <div class="container">
+                <div class="work-card__tags">
+                  <span class="tag">UX</span>
+                  <span class="tag">UI</span>
+                  <span class="tag">DEV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Card #3-->
+            <div class="work-card">
+              <div class="container">
+                <h3 class="work-card__h3">Orca</h3>
+                <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
+              </div>
+              <figure class="work-card__figure" data-cursor="View Project"></figure>
+              <div class="container">
+                <div class="work-card__tags">
+                  <span class="tag">UX</span>
+                  <span class="tag">UI</span>
+                  <span class="tag">DEV</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Work Card #4-->
+            <div class="work-card">
+              <div class="container">
+                <h3 class="work-card__h3">Orca</h3>
+                <p class="work-card__copy">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Libero tempora possimus ut dicta assumenda voluptatibus?</p>
+              </div>
+              <figure class="work-card__figure" data-cursor="View Project"></figure>
               <div class="container">
                 <div class="work-card__tags">
                   <span class="tag">UX</span>
@@ -133,43 +161,40 @@
         </div>
 
         <div class="container">
-
           <h2 class="about__h2">I <span>love</span> <span>Minimalism</span></h2>
           <p class="about__copy">
             I am a self-taught designer and front-end developer. I like the idea of creating simple, accessible and functional digital products. 
           </p>
+        </div>
 
-          <div class="about__wrapper">
+        <div class="about__wrapper">
 
-            <!-- About Card #1-->
-            <div class="about-card" id="aboutCard1"  data-cursor="View Stack">
-              <h3 class="about-card__h3">Stack</h3>
-              <button class="about-card__btn" data-target="aboutCard1"></button>
-              <div class="about-card__body">
-                <ul class="about-card__list">
-                  <li class="about-card__item" style="--delay: .1s">Html</li>
-                  <li class="about-card__item" style="--delay: .2s">Css</li>
-                  <li class="about-card__item" style="--delay: .3s">Js</li>
-                  <li class="about-card__item" style="--delay: .4s">Vuejs</li>
-                </ul>
+          <div class="about__card-bg" data-position="false"></div>
+
+          <div class="about__contain">
+
+              <div class="about__card" data-index="0" data-active="false" data-cursor="View Stack">
+                <div class="container">
+                  <span class="about__li">HTML</span>
+                  <span class="about__li">CSS</span>
+                  <h3 class="about__h3">Stack</h3>
+                  <span class="about__li">JAVASCRIPT</span>
+                  <span class="about__li">REACTJS</span>
+                </div>
               </div>
-            </div>
 
-            <!-- About Card #2-->
-            <div class="about-card delay" id="aboutCard2" data-cursor="View Skills">
-              <h3 class="about-card__h3 fix-left">Skills</h3>
-              <button class="about-card__btn" data-target="aboutCard2"></button>
-              <div class="about-card__body">
-                <ul class="about-card__list">
-                  <li class="about-card__item" style="--delay: .1s">Front Dev</li>
-                  <li class="about-card__item" style="--delay: .2s">User Interfaces</li>
-                  <li class="about-card__item" style="--delay: .3s">User Experience</li>
-                  <li class="about-card__item" style="--delay: .4s">Branding</li>
-                </ul>
+              <div class="about__card" data-index="1" data-active="false" data-cursor="View Skills">
+                <div class="container">
+                  <span class="about__li">Front-end Developer</span>
+                  <span class="about__li">UI Designer</span>
+                  <h3 class="about__h3">Skills</h3>
+                  <span class="about__li">UX Designer</span>
+                  <span class="about__li">Branding</span>
+                </div>
               </div>
-            </div>
-
+              
           </div>
+
         </div>
       </section>
 
@@ -193,7 +218,7 @@
 
         <div class="container">
 
-          <h2 class="contact__h2">Now you <span>turn</span> of <span>greet ;)</span></h2>
+          <h2 class="contact__h2">Now you <span>turn</span> of <span>greet !)</span></h2>
 
           <div class="contact-items">
 
