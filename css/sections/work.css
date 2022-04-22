@@ -18,7 +18,6 @@
 }
 
 .work-card__h3{
-	display: inline-block;
 	margin-bottom: var(--m4);
 	transition: .5s ease .1s;
 }
@@ -39,8 +38,10 @@
 	margin-top: var(--m4);
 	width: 100%;
 	height: 250px;
-	overflow: hidden;
 	background-color: #fff;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 	transition: .8s .6s;
 }
 
@@ -52,7 +53,6 @@
 }
 
 .work-card__tags{
-	display: inline-block;
 	margin: var(--m4) 0 0 var(--m4);
 }
 
@@ -84,6 +84,22 @@
 	text-align: right;
 }
 
+.work-card:nth-child(1) .work-card__figure{
+	background-image: url(../../assets/work-1.jpg);
+}
+
+.work-card:nth-child(2) .work-card__figure{
+	background-image: url(../../assets/work-4.jpg);
+}
+
+.work-card:nth-child(3) .work-card__figure{
+	background-image: url(../../assets/work-3.jpg);
+}
+
+.work-card:nth-child(4) .work-card__figure{
+	background-image: url(../../assets/work-6.jpg);
+}
+
 /*  Work 1024px  */
 @media (max-width: 1024px) {
 	.work__h2 span:nth-child(2){
@@ -108,7 +124,7 @@
 }
 
 
-/*---------  WORK 576px  ----------*/
+/*  Work 576px  */
 @media (max-width: 400px) {
 	.work__h2 span:nth-child(2){
 		display: inline-block;

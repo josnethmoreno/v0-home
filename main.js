@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 /*---------  NAVMENU  ----------*/
 const navMenu = document.getElementById('navMenu'),
@@ -43,43 +43,83 @@ navLink.forEach(n => n.addEventListener('click', closeMenu));
 navSocialLink.forEach(n => n.addEventListener('click', closeMenu));
 
 
+/*---------  FADED NAVBRAND  ----------*/
+const home = document.getElementById('home'),
+      navLogo = document.querySelector('.nav__logo');
+
+const appearNavBrand = (entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      navLogo.classList.remove('active');
+    } else {
+      navLogo.classList.add('active');
+    }
+  })
+}
+
+const observerHome = new IntersectionObserver(appearNavBrand, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.4
+});
+
+observerHome.observe(home);
+
+
+/*---------  ABOUT CARDS  ----------*/
+
+const about = document.querySelector('.about'),
+      aboutBg = document.querySelector('.about__card-bg'),
+      aboutCard = document.querySelectorAll('.about__card'),
+      aboutCard1 = document.querySelector('.about__card[data-index="0"]'),
+      aboutCard2 = document.querySelector('.about__card[data-index="1"]');
+
+window.addEventListener('click', (e) => {
+  if(e.target.className !== 'about__card') {
+    aboutBg.setAttribute('data-position', 'false');
+    aboutCard1.setAttribute('data-active', 'false');
+    aboutCard2.setAttribute('data-active', 'false');
+  } 
+})
+
+
+aboutCard.forEach(c => c.addEventListener('click', (e) => {
+
+  const cursor = document.querySelector('.cursor');
+
+  (c.getAttribute('data-index') === '0')
+    ? aboutBg.setAttribute('data-position', 'left')
+    : aboutBg.setAttribute('data-position', 'right')
+
+  if(e.target.getAttribute('data-index') === '0'){
+    aboutCard1.setAttribute('data-active', 'true');
+    aboutCard2.setAttribute('data-active', 'false');
+  }
+
+  if(e.target.getAttribute('data-index') === '1'){
+    aboutCard1.setAttribute('data-active', 'false');
+    aboutCard2.setAttribute('data-active', 'true');
+  }
+
+  if(c.getAttribute('data-active') === 'true'){
+    cursor.classList.remove('is-action');
+    cursor.classList.add('is-link');
+  }
+
+}));
+
+
+
+
+
 /*---------  REDIRECTION GREET TO CONTACT  ----------*/
 const navLinkContact = document.querySelector('.nav__link[href="#greet"]');
 
 navLinkContact.onclick = () => {
   setTimeout(() => {
     location.href='#contact';
-  }, 2000)
+  }, 3000)
 }
-
-
-/*---------  OPEN CARD  ----------*/
-const cards = document.querySelectorAll('.about-card');
-const cardBtn = document.querySelectorAll('.about-card__btn');
-
-const openCard = (c) => {
-
-  let cardTarget = c.target.getAttribute('data-target');
-
-  for(let i = 0; i < cards.length; i++) {
-    let card = cards[i];
-    if (card.getAttribute('id') === cardTarget) {
-      const cursor = document.querySelector('.cursor');
-      card.classList.toggle('active');
-      if(card.classList.contains('active')){
-        card.classList.remove('delay');
-        cursor.classList.add('is-link')
-        cursor.classList.remove('is-action');
-      } else {
-        card.classList.add('delay');
-        cursor.classList.add('is-action')
-        cursor.classList.remove('is-link');
-      }
-    }
-  }
-}
-
-cardBtn.forEach(c => c.addEventListener('click', openCard ));
 
 
 /*---------  TEXT SCROLL HORIZONTAL  ----------*/
@@ -127,7 +167,7 @@ function isTouchDevice() {
 
 const isTouch = isTouchDevice();
 
-if (!isTouch){
+if (!isTouch) {
 
   const cursor = document.querySelector('.cursor');
 
@@ -162,7 +202,7 @@ if (!isTouch){
       el.addEventListener('mouseout', () => cursor.classList.remove('is-hidden'));
     });
 
-    document.querySelectorAll('.work-card__img, .home__scrolldown').forEach((el) => {
+    document.querySelectorAll('.work-card__figure, .home__scrolldown').forEach((el) => {
       el.addEventListener('mouseover', () => {
         const cursorText = el.getAttribute('data-cursor');
         const cursorPoint = document.querySelector('.cursor__point');
@@ -176,18 +216,17 @@ if (!isTouch){
       });
     });
 
-    document.querySelectorAll('.about-card').forEach((el) => {
+    document.querySelectorAll('.about__card').forEach((el) => {
       el.addEventListener('mouseover', () => {
         const cursorText = el.getAttribute('data-cursor');
         const cursorPoint = document.querySelector('.cursor__point');
 
-        if(el.classList.contains('active')){
-          cursor.classList.add('is-link');
-        } else {
+        if(el.getAttribute('data-active') === 'false') {
           cursor.classList.add('is-action');
+          cursorPoint.setAttribute('data-cursor', cursorText);
+        } else{
+          cursor.classList.add('is-link');
         }
-
-        cursorPoint.setAttribute('data-cursor', cursorText);
       });
 
       el.addEventListener('mouseout', () => {
@@ -208,5 +247,4 @@ if (!isTouch){
   }
 
   cursorEvents();
-
 }
