@@ -164,7 +164,7 @@
 	.about__card-mobile{
 		display: inline-block;
 		position: absolute;
-		top: var(--m4);
+		top: var(--m2);
 		left: var(--m4);
 		color: #fff;
 		font-family: var(--open);
@@ -190,7 +190,7 @@
 		top: inherit;
 		left: inherit;
 		right: var(--m4);
-		bottom: var(--m4);
+		bottom: var(--m2);
 	}
 
 	.about__card-mobile:nth-child(2)::before{

@@ -251,21 +251,24 @@ if (!isTouch) {
 
 
 /*---------  LOADER  ----------*/
-const loaderWrapper = document.querySelector('.loader-wrapper'),
-      loaderMsg = document.querySelector('.loader-msg'),
-      h1 = document.querySelector('.home__h1'),
-      h2 = document.querySelector('.home__h2'),
-      header = document.querySelector('.header'),
-      homeScrollDown = document.querySelector('.home__scrolldown');
 
-const loader = setTimeout(() => {
-  loaderWrapper.setAttribute('data-show', 'false');
-  h1.setAttribute('data-show', 'true');
-  h2.setAttribute('data-show', 'true');
-  header.setAttribute('data-show', 'true');
-  homeScrollDown.setAttribute('data-show', 'true');
-  body.classList.remove('disable-scroll');
-}, 5000);
+window.onload = () => {
+  const loaderWrapper = document.querySelector('.loader-wrapper'),
+        loaderMsg = document.querySelector('.loader-msg'),
+        h1 = document.querySelector('.home__h1'),
+        h2 = document.querySelector('.home__h2'),
+        header = document.querySelector('.header'),
+        homeScrollDown = document.querySelector('.home__scrolldown');
+
+        const loader = setTimeout(() => {
+          loaderWrapper.setAttribute('data-show', 'false');
+          h1.setAttribute('data-show', 'true');
+          h2.setAttribute('data-show', 'true');
+          header.setAttribute('data-show', 'true');
+          homeScrollDown.setAttribute('data-show', 'true');
+          body.classList.remove('disable-scroll');
+        }, 5000);
+}
 
 
 /*---------  LOADER ELEMENTS  ----------*/

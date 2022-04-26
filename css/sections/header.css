@@ -139,6 +139,7 @@
 	bottom: 0;
 	padding: var(--p4);
 	width: 100%;
+	overflow: hidden;
 }
 
 .nav__social{
