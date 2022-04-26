@@ -27,7 +27,15 @@
 	padding: 0 0 var(--p4) var(--p3);
 	margin-top: var(--p3);
 	font-size: var(--h5);
+	transform: translateX(-10%);
+	opacity: 0;
 	overflow: hidden;
+	transition: var(--7s-ease);
+}
+
+.contact-items__link[data-show="true"]{
+	transform: translateX(0);
+	opacity: 1;
 }
 
 .contact-items__link::before{

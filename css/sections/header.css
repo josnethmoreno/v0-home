@@ -6,6 +6,12 @@
 	transition: var(--3s-ease) transform;
 	z-index: var(--z2);
 	pointer-events: none;
+	transform: translateY(-100%);
+	transition: var(--7s-ease) 3s;
+}
+
+.header[data-show="true"]{
+	transform: translateY(0);
 }
 
 .nav{

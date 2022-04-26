@@ -248,3 +248,70 @@ if (!isTouch) {
 
   cursorEvents();
 }
+
+
+/*---------  LOADER  ----------*/
+const loaderWrapper = document.querySelector('.loader-wrapper'),
+      loaderMsg = document.querySelector('.loader-msg'),
+      h1 = document.querySelector('.home__h1'),
+      h2 = document.querySelector('.home__h2'),
+      header = document.querySelector('.header'),
+      homeScrollDown = document.querySelector('.home__scrolldown');
+
+const loader = setTimeout(() => {
+  loaderWrapper.setAttribute('data-show', 'false');
+  h1.setAttribute('data-show', 'true');
+  h2.setAttribute('data-show', 'true');
+  header.setAttribute('data-show', 'true');
+  homeScrollDown.setAttribute('data-show', 'true');
+  body.classList.remove('disable-scroll');
+}, 5000);
+
+
+/*---------  LOADER ELEMENTS  ----------*/
+const workFigure = document.querySelectorAll('.work-card__figure'),
+      workMobile = document.querySelectorAll('.work-card__mobile'),
+      aboutMobile = document.querySelectorAll('.about__card-mobile'),
+      contactLi = document.querySelectorAll('.contact-items__link');
+
+const dataShow = (entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      entry.target.setAttribute('data-show', 'true');
+    }
+  })
+}
+
+const observerDataShow = new IntersectionObserver(dataShow, {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3
+});
+
+workFigure.forEach( (e) => {
+  observerDataShow.observe(e);
+});
+
+workMobile.forEach( (e) => {
+  observerDataShow.observe(e);
+});
+
+aboutMobile.forEach( (e) => {
+  observerDataShow.observe(e);
+});
+
+contactLi.forEach( (e) => {
+  observerDataShow.observe(e);
+});
+
+
+function homeLocation(){
+  location.href='#top';
+}
+
+homeLocation();
+
+window.addEventListener('hashchange', (e) => {
+  e.preventDefault();
+  window.history.pushState({}, "", '/');
+})
