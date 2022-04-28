@@ -1,0 +1,25 @@
+.loader-wrapper{
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	background-color: var(--black);
+	font-family: var(--open);
+	z-index: 5;
+}
+
+.loader-wrapper[data-show="false"]{
+	transform: translateX(200%);
+	opacity: 0;
+}
+
+.loader-msg span{
+	transform: translateY(-10px);
+	transition: var(--3s-ease) calc( 1s + var(--delay));
+	color: var(--light);
+	font-size: var(--h6);
+	opacity: 1;
+}

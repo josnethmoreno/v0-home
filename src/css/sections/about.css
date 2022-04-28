@@ -1,0 +1,244 @@
+.about{
+	padding: var(--p1) 0 0 0 !important;
+}
+
+.about__h2{
+	font-weight: var(--bold);
+	margin-bottom: calc(var(--m1) - var(--m4));
+}
+
+.about__h2 span:nth-child(1){
+	font-weight: var(--regular);
+}
+
+.about__h2 span:nth-child(2){
+	display: block;
+	margin-left: 2.8rem;
+}
+
+.about__copy{
+	margin: 0 0 var(--m2) 3rem;
+	max-width: 400px;
+	color: var(--light);
+	font-family: var(--open);
+}
+
+.about__wrapper{
+	position: relative;
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../../assets/about/about-bg.jpg);
+	background-repeat: no-repeat;
+}
+
+.about__card-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background-color: var(--black);
+	backdrop-filter: blur(1px);
+	transition: var(--5s-ease);
+	opacity: .9;
+}
+
+.about__card-bg[data-position="false"]{
+	transform: translateX(-100%);
+}
+
+.about__card-bg[data-position="left"]{
+	transform: translateX(0);
+}
+
+.about__card-bg[data-position="right"]{
+	transform: translateX(100%);
+}
+
+.about__contain{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.about__contain{
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 1fr;
+	height: 100%;
+}
+
+.about__card{
+	padding: var(--p3) 0;
+	height: 100%;
+	transition: var(--3s-ease);
+	z-index: 1;
+}
+
+.about__card > .container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: calc(1440px / 2);
+	margin: 0 0 0 auto;
+	height: 100%;
+	opacity: 0;
+	transition: var(--3s-ease);
+	pointer-events: none;
+}
+
+.about__h3{
+	transform: translateX(-100px);
+	transition: var(--3s-ease);
+	transition-delay: .4s;
+	opacity: 0;
+}
+
+.about__li{
+	display: block;
+	padding: 0 0 0 var(--m4);
+	opacity: 0;
+	transition: var(--5s-ease);
+	transition-delay: .6s;
+}
+
+.about__card:nth-child(2){
+	text-align: right;
+}
+
+.about__card:nth-child(2) > .container{
+	margin: 0 auto 0 0;
+	text-align: right;
+}
+
+
+.about__card:nth-child(2) .about__h3{
+	transform: translateX(100px);
+}
+
+.about__card:nth-child(2) .about__li{
+	padding: 0 var(--m4) 0 0;
+}
+
+.about__card[data-active="false"] {
+	opacity: 0;
+}
+
+.about__card[data-active="true"] .container{
+	opacity: 1;
+}
+
+.about__card[data-active="true"] .about__h3{
+	transform: translateX(0);
+	margin: var(--m4) 0;
+	opacity: 1;
+}
+
+.about__card[data-active="true"] .about__li{
+	margin: var(--m4) 0;
+	opacity: 1;
+	transition-delay: 0;
+}
+
+.about__h3, .about__li{
+	pointer-events: none;
+}
+
+.about__card-mobile{
+	display: none;
+}
+
+
+/*  About 1024px  */
+@media (max-width: 1024px) {
+	.about__h2 span:nth-child(2){
+		margin-left: 2.4rem
+	}
+
+	.about__copy{
+		margin-left: 2.4rem;
+	}
+
+	.about__card-mobile{
+		display: inline-block;
+		position: absolute;
+		top: var(--m2);
+		left: var(--m4);
+		color: #fff;
+		font-family: var(--open);
+		overflow: hidden;
+	}
+
+	.about__card-mobile::before{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background-color: var(--white);
+		transform: translateX(-100%);
+		transition: var(--3s-ease);
+	}
+
+	.about__card-mobile[data-show="true"]::before{
+		transform: translateX(0);
+	}
+
+	.about__card-mobile:nth-child(2){
+		top: inherit;
+		left: inherit;
+		right: var(--m4);
+		bottom: var(--m2);
+	}
+
+	.about__card-mobile:nth-child(2)::before{
+		transform: translateX(100%);
+	}
+
+	.about__card-mobile:nth-child(2)[data-show="true"]::before{
+		transform: translateX(0);
+	}
+}
+
+
+/*  About 768px  */
+@media (max-width: 768px) {
+	.about__h2 span:nth-child(2){
+		margin-left: 1.9rem;
+	}
+
+	.about__copy{
+		margin-left: 1.9rem;
+	}
+
+	.about__wrapper{
+		padding: 0;
+	}
+}
+
+
+/*  About 576px  */
+@media (max-width: 576px) {
+	.about-card{
+		height: 330px;
+	}
+
+	.about-card__item{
+		padding: 1.5rem 0 .3rem var(--p3);
+	}
+}
+
+
+/*  About 400px  */
+@media (max-width: 400px) {
+	.about__h2 span:nth-child(2) {
+		display: inline-block;
+		margin-left: 0;
+	}
+
+	.about__li{
+		font-size: var(--text-small);
+	}
+}

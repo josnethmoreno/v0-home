@@ -1,0 +1,57 @@
+.greet{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: var(--black);
+	background-color: var(--white);
+	overflow: hidden;
+}
+
+.greet__hi{
+	position: absolute;
+	right: 50%;
+	margin-top: var(--m1);
+	width: 100vw;  
+	white-space: nowrap;
+	font-size: var(--h1);
+	font-weight: var(--bold);
+	transition: .3s;
+	--move: 0;
+	transform: translateX(var(--move)) translateZ(0);
+	will-change: transform;
+}
+
+.greet__hi:nth-child(2){
+	margin-bottom: calc(var(--m1) + var(--m2));
+}
+
+.greet__hi.text-animated{
+	animation: text-horizontal 20s linear infinite alternate;
+}
+
+@keyframes text-horizontal{
+	0%{
+		right: 50%;
+	}
+
+	100%{
+		right: 100%;
+	}
+}
+
+.greet__hi.text-animated-reverse{
+	animation: text-horizontal 20s linear infinite alternate-reverse;
+}
+
+@keyframes text-horizontal-reverse{
+	0%{
+		left: -50%;
+	}
+
+	100%{
+		left: -100%;
+	}
+}
+
