@@ -1,4 +1,17 @@
 .footer{
-	padding: 0 var(--p3);
+	display: flex;
+	justify-content: space-between;
+	padding: var(--p3) var(--p3);
+	color: var(--light-2);
 	text-align: right;
+	font-family: var(--open);
+}
+
+.footer__copy span{
+	color: var(--white);
+}
+
+.footer__top{
+	color: var(--light);
+	font-weight: var(--normal);
 }
