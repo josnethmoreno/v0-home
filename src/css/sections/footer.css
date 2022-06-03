@@ -1,9 +1,6 @@
 .footer{
-	display: flex;
-	justify-content: space-between;
-	padding: var(--p3) var(--p3);
+	padding: var(--p3) 0 var(--p2) 0;
 	color: var(--light-2);
-	text-align: right;
 	font-family: var(--open);
 }
 
