@@ -66,59 +66,13 @@ const observerHome = new IntersectionObserver(appearNavBrand, {
 observerHome.observe(home);
 
 
-/*---------  ABOUT CARDS  ----------*/
-
-const about = document.querySelector('.about'),
-      aboutBg = document.querySelector('.about__card-bg'),
-      aboutCard = document.querySelectorAll('.about__card'),
-      aboutCard1 = document.querySelector('.about__card[data-index="0"]'),
-      aboutCard2 = document.querySelector('.about__card[data-index="1"]');
-
-window.addEventListener('click', (e) => {
-  if(e.target.className !== 'about__card') {
-    aboutBg.setAttribute('data-position', 'false');
-    aboutCard1.setAttribute('data-active', 'false');
-    aboutCard2.setAttribute('data-active', 'false');
-  } 
-})
-
-
-aboutCard.forEach(c => c.addEventListener('click', (e) => {
-
-  const cursor = document.querySelector('.cursor');
-
-  (c.getAttribute('data-index') === '0')
-    ? aboutBg.setAttribute('data-position', 'left')
-    : aboutBg.setAttribute('data-position', 'right')
-
-  if(e.target.getAttribute('data-index') === '0'){
-    aboutCard1.setAttribute('data-active', 'true');
-    aboutCard2.setAttribute('data-active', 'false');
-  }
-
-  if(e.target.getAttribute('data-index') === '1'){
-    aboutCard1.setAttribute('data-active', 'false');
-    aboutCard2.setAttribute('data-active', 'true');
-  }
-
-  if(c.getAttribute('data-active') === 'true'){
-    cursor.classList.remove('is-action');
-    cursor.classList.add('is-link');
-  }
-
-}));
-
-
-
-
-
 /*---------  REDIRECTION GREET TO CONTACT  ----------*/
 const navLinkContact = document.querySelector('.nav__link[href="#greet"]');
 
 navLinkContact.onclick = () => {
   setTimeout(() => {
     location.href='#contact';
-  }, 3000)
+  }, 2000)
 }
 
 
@@ -216,25 +170,6 @@ if (!isTouch) {
       });
     });
 
-    document.querySelectorAll('.about__card').forEach((el) => {
-      el.addEventListener('mouseover', () => {
-        const cursorText = el.getAttribute('data-cursor');
-        const cursorPoint = document.querySelector('.cursor__point');
-
-        if(el.getAttribute('data-active') === 'false') {
-          cursor.classList.add('is-action');
-          cursorPoint.setAttribute('data-cursor', cursorText);
-        } else{
-          cursor.classList.add('is-link');
-        }
-      });
-
-      el.addEventListener('mouseout', () => {
-        cursor.classList.remove('is-action')
-        cursor.classList.remove('is-link')
-      });
-    })
-
     document.querySelectorAll('.greet').forEach((el) => {
       el.addEventListener('mouseover', () => cursor.classList.add('is-full'));
       el.addEventListener('mouseout', () => cursor.classList.remove('is-full'));
@@ -267,7 +202,7 @@ window.onload = () => {
           header.setAttribute('data-show', 'true');
           homeScrollDown.setAttribute('data-show', 'true');
           body.classList.remove('disable-scroll');
-        }, 5000);
+        }, 4000);
 }
 
 

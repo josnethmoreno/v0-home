@@ -13,7 +13,7 @@
 
 .contact__h2 span:nth-child(2){
 	display: block;
-	margin-left: 25.6rem;
+	margin-left: 24.4rem;
 }
 
 .contact-items__caption{
@@ -74,7 +74,7 @@
 /*  Contact 1024px  */
 @media (max-width: 1024px) {
 	.contact__h2 span:nth-child(2){
-		margin-left: 22.1rem;
+		margin-left: 21rem;
 	}
 }
 
@@ -82,7 +82,7 @@
 /*  Contact 768px  */
 @media (max-width: 768px) {
 	.contact__h2 span:nth-child(2){
-		margin-left: 17.1rem;
+		margin-left: 16.2rem;
 	}
 }
 
